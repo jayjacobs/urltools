@@ -134,7 +134,7 @@ suffix_extract <- function(domains){
         domain[index] <- sapply(splithosts[matched], function(x) unlist(x[split.after-1]))
         if (split.after>2) { # then we have a subdomain
           # and if we are at least 2 in, we have a subdomain 
-          subdomain[index] <- sapply(splithosts[matched], function(x) paste(x[1:(split.after-1)], collapse="."))
+          subdomain[index] <- sapply(splithosts[matched], function(x) paste(x[1:(split.after-2)], collapse="."))
         }
       }
       # save the matched entities off into the tld vectors
